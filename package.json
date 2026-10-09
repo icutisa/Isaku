@@ -1,0 +1,19 @@
+{
+  "name": "cutsaplay",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CutsaPlay — website donghua dengan API Anichin dan server Node.js portabel.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "cheerio": "1.2.0"
+  }
+}
