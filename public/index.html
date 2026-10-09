@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="CutsaPlay — katalog donghua, pencarian, daftar episode, dan pilihan server video dari Anichin.">
+  <title>CutsaPlay — Nonton Donghua</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/live-app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Langsung ke konten</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#/" aria-label="CutsaPlay, beranda">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M9 5.5 23 14 9 22.5Z" fill="currentColor"/></svg></span>
+        <span>Cutsa<span class="brand-accent">Play</span><small>DONGHUA & ANIMASI</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Menu utama">
+        <a href="#/" data-nav="home">Beranda</a>
+        <a href="#/katalog" data-nav="catalog">Katalog</a>
+        <a href="#/jadwal" data-nav="schedule">Jadwal</a>
+        <a href="#/koleksi" data-nav="watchlist">Daftar saya</a>
+      </nav>
+      <form class="search-form" role="search" id="search-form">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        <label class="sr-only" for="search-input">Cari judul donghua</label>
+        <input id="search-input" type="search" placeholder="Cari donghua..." autocomplete="off" maxlength="100">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+      <a class="history-button" href="#/riwayat" title="Riwayat menonton" aria-label="Riwayat menonton"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11a9 9 0 1 1 2.3 6M3 5v6h6M12 7v5l3 2"/></svg></a>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><div class="initial-loading" role="status">Memuat katalog Anichin…</div></main>
+  <footer class="footer">
+    <a href="#/" class="footer-brand">Cutsa<span>Play</span></a>
+    <p>Temukan cerita. Nikmati petualangannya.</p>
+    <div class="footer-meta"><span>Katalog dari Anichin</span><button id="about-demo" type="button">Tentang CutsaPlay</button></div>
+  </footer>
+  <nav class="mobile-nav" aria-label="Menu utama seluler">
+    <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10h-6v-6H9v6H3Z"/></svg><span>Beranda</span></a>
+    <a href="#/katalog" data-nav="catalog"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Katalog</span></a>
+    <a href="#/jadwal" data-nav="schedule"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 11h18M7 15h3M14 15h3"/></svg><span>Jadwal</span></a>
+    <a href="#/koleksi" data-nav="watchlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Daftar saya</span></a>
+  </nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button id="dialog-close" class="dialog-close" aria-label="Tutup" type="button">×</button><div id="dialog-content"></div></div></dialog>
+  <noscript><p class="noscript">Aktifkan JavaScript untuk membuka katalog dan pemutar video.</p></noscript>
+</body>
+</html>
